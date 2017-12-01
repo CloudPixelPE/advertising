@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Welcome to Advertisement and Lottery</title>
+<head>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Links -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/camera.css">
+
+    <!--JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src='js/device.min.js'></script>
+	 <script src="js/prefixfree.min.js"></script>
+
+	 </head>
+
+ <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html {
+  height: 100%;
+}
+body {
+  background:
+    -webkit-linear-gradient(rgba(5, 610, 255, 0.4), rgba(135, 60, 255, 0.0) 80%),
+    -webkit-linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 25%, rgba(255, 160, 65, 0.9) 76%);
+}
+.cf:before, .cf:after {
+  content:" ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 50;
+}
+.menu {
+  list-style:none;
+  margin: 55px auto;
+  margin-top: -20px;
+  margin-left:-90px;
+  width: 1000px;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+
+}
+.menu > li {
+  background: white;
+  float: left;
+  position: relative;
+  -webkit-transform: skewX(25deg);
+}
+.menu a {
+  display: block;
+  color: blue;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 15px;
+}
+.menu li:hover {
+  background: silver;
+}
+.menu > li > a {
+  -webkit-transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  -webkit-transform: skewX(-30deg);
+  -webkit-transform-origin: left top;
+}
+.submenu li {
+  background-color: pink;
+  position: relative;
+  overflow: hidden;
+}
+.submenu > li > a {
+  padding: 1em 2em;
+}
+.submenu > li::after {
+  content:'';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+}
+/* Odd stuff */
+.submenu > li:nth-child(odd) {
+  -webkit-transform: skewX(-25deg) translateX(35);
+}
+.submenu > li:nth-child(odd) > a {
+  -webkit-transform: skewX(30deg);
+}
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  -webkit-transform: skewX(-25deg) rotate(60deg);
+}
+/* Even stuff */
+.submenu > li:nth-child(even) {
+  -webkit-transform: skewX(25deg) translateX(-35);
+}
+.submenu > li:nth-child(even) > a {
+  -webkit-transform: skewX(-25deg);
+}
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  -webkit-transform: skewX(25deg) rotate(-60deg);
+}
+/* Show dropdown */
+.submenu, .submenu li {
+  opacity: 0;
+  visibility: hidden;
+}
+.submenu li {
+  transition: .50s ease -webkit-transform;
+}
+.menu > li:hover .submenu, .menu > li:hover .submenu li {
+  opacity: 100;
+  visibility: visible;
+}
+.menu > li:hover .submenu li:nth-child(even) {
+  -webkit-transform: skewX(35deg) translateX(35px);
+}
+.menu > li:hover .submenu li:nth-child(odd) {
+  -webkit-transform: skewX(-35deg) translateX(-35px);
+}
+
+
+#middle {
+
+    width:110%;
+    height: 145px;
+	margin-top:1px;
+margin-left:-32px;
+
+}
+
+#navl {
+padding-top:40px;
+}
+
+#nav {
+    height: 1050px;
+    width:250px;
+    float:left;
+	margin-top:-50px;
+	align:left;
+	color:yellow;
+	margin-left:5px;background: url(ads/nav.png) repeat;
+}
+
+
+
+</style>
+<body>
+
+
+<div class="page">
+    <!--========================================================
+                              HEADER
+    =========================================================-->
+    <header>
+        <div class="container">
+            <h1 class="navbar-brand">
+                <a href=""><font color="orange"><b>Lottery and Advertisements </b></font></a>
+            </h1>
+        </div>
+        <div class="camera_container">
+            <div id="camera" class="camera_wrap">
+                <div data-src="images/slide01.jpg">
+                    <div class="camera_caption fadeIn">
+                        <h2>Lava Electronic Accessories<br />
+                        </h2>
+                        <h5>Smart phones, Tablets, and Many More</h5>
+                    </div>
+                </div>
+                <div data-src="images/slide02.jpg">
+                    <div class="camera_caption fadeIn">
+                        <h2>Philips is Famous for  Electronic Accessories.<br />
+                        </h2>
+                        <h5></h5>
+                    </div>
+                </div>
+                <div data-src="images/slide03.jpg">
+                    <div class="camera_caption fadeIn">
+                        <h2>Royal Enfield<br />
+                        </h2>
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <nav class="navbar navbar-default navbar-static-top wow zoomIn">
+            <div id="stuck_container" class="stuck_container">
+                <div class="container">
+
+    <ul class="menu cf">
+  <li><a href="">Home</a></li>
+  <li>
+    <a href="" >Information</a>
+    <ul class="submenu">
+      <li><a href="lots.php" target="Main">Lottery</a></li>
+      <li><a href="advert.php" target="Main" >Advertisement</a></li>
+    </ul>
+  </li>
+
+
+  <li>
+    <a href="">Register</a>
+    <ul class="submenu">
+      <li><a href="create.php" target="Main">Lottery</a></li>
+      <li><a href="advreg.php" target="Main">Advertisement</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="" >Login</a>
+    <ul class="submenu">
+      <li><a href="signin.php" target="Main">Lottery</a></li>
+      <li><a href="adlogin.php" target="Main">Advertisement</a></li>
+    </ul>
+  </li>
+
+
+  <li><a href="services.html" target="Main">Services</a></li>
+  <li><a href="gallary.html" target="Main">Gallary</a></li>
+    <li><a href="faq.html" target="Main">FAQs</a></li>
+	  <li><a href="aboutus.html" target="Main">About Us</a></li>
+  <li><a href="feedback.php" target="Main">Contact Us</a></li>
+	</ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--========================================================
+                              CONTENT
+    =========================================================-->
+
+    <main>
+	<marquee><font color="gold" face="Gabriola" size="6"><b>Welcome to Advertisements and Lottery</b></font></marquee>
+<div id="nav" align="left">
+<p align="right"><br>
+<h3>Current News</h3></font><br>
+<marquee scrollamount="2" behavior="scroll" direction="right" ><ul id="navmenu"><li><a href="www.residency.com">Earn while Learning</li></ul></p></a></marquee><br><br>
+</font>
+<div id="nav1" align="left" class="wow fadeInLeft">
+<h2>Govt. Schemes</h2><font color="#5B5EA6" size="4"><center>
+<br><br>Swachh Bharat Abhiyaan<br><a href="https://swachhbharat.mygov.in/"><img src="ads/Swachh%20India.jpg" width="180" height="160"></a><br><br>
+<br>Digital India<br><a href="http://digitalindia.gov.in/"><img src="ads/Digital%20India.jpg" width="180" height="160"></a><br><br>
+<br>Skill India<br><a href="http://skillindia.gov.in/"><img src="ads/Skill%20India.jpg" width="180" height="160"></a><br><br>
+<br>Flipkart<br><a href="http://www.flipkart.com/"><img src="ads/Flip.png" width="180" height="160"></a>
+</div>
+</div>
+
+
+<div id="middle">
+<center>
+<iframe id="AllFrame" name="Main" src="main.html" target="Main" width="950" height="1100" scrolling="yes"
+frameborder="0" ></iframe>
+</p>
+</center>
+</div>
+
+          <section class="well3 text-center bg-secondary">
+            <div class="container">
+            </div>
+        </section>
+        <section class="parallax well4" data-url="images/parallax2.jpg" data-mobile="false" data-speed="1">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-10 col-md-16 wow fadeInRight">
+                       <H3>Please Visit Again...</H3>
+                   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+		<center><div class="wow rubberband"><iframe  id="AllFrame" name="Ads" src="sli.html" align="center" width="1000" height="330" scrolling="yes"
+frameborder="0" ></center></iframe></div>
+    </main>
+
+    <!--========================================================
+                            FOOTER
+    =========================================================-->
+    <footer class="bg-secondary">
+          <div class="container">
+              <div class="row center767">
+                  <div class="col-md-4 col-sm-4 col-xs-12 mg_add">
+                      <ul class="inline-list">
+                          <li><a class="fa fa-twitter" href="#"></a></li>
+                          <li><a class="fa fa-google-plus" href="#"></a></li>
+                          <li><a class="fa fa-facebook" href="#"></a></li>
+                          <li><a class="fa fa-rss" href="#"></a></li>
+  						<li><a class="fa fa-youtube" href="#"></a></li>
+
+                      </ul>
+                  </div>
+
+                  <div class="col-md-3 col-sm-4 col-xs-12 mg_add1">
+                      <p class="rights">
+                          © <span id="copyright-year"></span> | Informatics Professionals Krishna Kulkarni
+
+                      </p>
+                  </div>
+                  <div class="col-md-4 col-sm-4  mg_add1"><div class="mydesign pull-right"><p>Design by <a href="http://www.myfreecsstemplates.com/" class="link">MyFreeCSSTemplates</a></p></div></div>
+              </div>
+          </div>
+          <div class="shadow"</div>
+      </footer>
+  </div>
+
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <!-- </script> -->
+</body>
+</html>
